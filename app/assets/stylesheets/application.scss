@@ -277,3 +277,83 @@ button.lang {
   width: 130px;
   padding-bottom: 15px;
 }
+
+/*------------------- Cassius Chen's Custom -------------------------*/
+body {
+  -webkit-font-smoothing: antialiased !important;
+}
+@import 'variables';
+@import 'mixin';
+
+.btn {
+  -webkit-box-shadow: 0 1px 0 rgba(0,0,0,.05);
+  box-shadow: 0 1px 0 rgba(0,0,0,.05);
+  -webkit-transition: background-color .218s,border-color .218s,box-shadow .218s;
+  transition: background-color .218s,border-color .218s,box-shadow .218s;
+  -webkit-user-select: none;
+  cursor: pointer;
+  outline: none;
+  display:-moz-inline-box;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.btn.btn-primary {
+  @include acd-btn-color($blue,$heavy-blue);
+  color: $white !important;
+  box-shadow:inset 0 -1px 0 $heavy-blue;
+  border:1px solid transparent;
+  border-bottom:1px solid $heavy-blue;
+}
+.btn.btn-primary:hover {
+  -webkit-box-shadow:none;
+  box-shadow:none;
+  background-color: $light-blue;
+  border-color:$light-blue;
+}
+.btn.btn-primary:active {
+  -webkit-box-shadow:inset 0 1px 0 $deep-blue;
+  box-shadow:inset 0 2px 0 $deep-blue;
+  @include acd-btn-color($heavy-blue,$heavy-blue);
+  border-top:1px solid $deep-blue;
+}
+
+.btn.btn-succes {
+  @include acd-btn-color($green,$heavy-green);
+  color: $white !important;
+  box-shadow:inset 0 -1px 0 $heavy-green;
+  border:1px solid transparent;
+  border-bottom:1px solid $heavy-green;
+}
+.btn.btn-succes:hover {
+  -webkit-box-shadow:none;
+  box-shadow:none;
+  background-color: $light-green;
+  border-color:$light-green;
+}
+.btn.btn-succes:active {
+  -webkit-box-shadow:inset 0 1px 0 $deep-green;
+  box-shadow:inset 0 1px 0 $deep-green;
+  @include acd-btn-color($dark-green,transparent);
+  border-top:1px solid $deep-green;
+}
+
+.btn.btn-danger {
+  @include acd-btn-color($red,$heavy-red);
+  color: $white !important;
+  box-shadow:inset 0 -1px 0 $heavy-red;
+  border:1px solid transparent;
+  border-bottom:1px solid $heavy-red;
+}
+.btn.btn-danger:hover {
+  -webkit-box-shadow:none;
+  box-shadow:none;
+  background-color: $light-red;
+  border-color:$light-red;
+}
+.btn.btn-danger:active {
+  -webkit-box-shadow:inset 0 1px 0 $deep-red;
+  box-shadow:inset 0 2px 0 $deep-red;
+  @include acd-btn-color($dark-red,transparent);
+  border-top:1px solid $deep-red;
+}
